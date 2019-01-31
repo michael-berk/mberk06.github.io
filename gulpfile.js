@@ -67,7 +67,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']); //I ADDED: Change to have _includes
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*','pages/*.html',], ['jekyll-rebuild']); //Check what saves cause browser sync to run
 	gulp.watch('_jadefiles/*.jade', ['jade']); //I ADDED: automatically convert jade files to html
 
 });
