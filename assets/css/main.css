@@ -476,3 +476,32 @@ hr {
   100% {
     -webkit-transform: translateY(10px);
     transform: translateY(10px); } }
+
+#message {
+  width: 50vw;
+  height: 50vh;
+  rows: 1000;
+  border: 1px solid gray;
+  font-size: 16px;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+    -webkit-box-shadow--moz-box-shadow: none;
+    -webkit-box-shadow-box-shadow: none; }
+
+#contactForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block; }
+
+#contactMethod {
+  height: 3vh; }
+
+#sendButton {
+  height: 6vh;
+  position: relative;
+  float: right; }
