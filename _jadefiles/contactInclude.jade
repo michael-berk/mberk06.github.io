@@ -1,7 +1,14 @@
-form(action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", method="post", id="contactForm", return="false")
+script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+
+form(id="contactForm", action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", method="POST", onsubmit="return false")
 	textarea(name="message", id="message", placeholder="...")
 	br
 	input(name="contactMethod", id="contactMethod", placeholder="phone or email")
-	button(id="sendButton") Send
+	button(id="sendButton", type="Submit") Send
 
-
+script.
+	$("#sendButton").click(function() {
+		document.getElementById('contactMethod').value = '';
+		document.getElementById('message').value = '';
+	});
+	

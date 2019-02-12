@@ -28,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
   },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "jquery": "^3.3.1"
+  }
 }

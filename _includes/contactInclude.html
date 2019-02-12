@@ -1,1 +1,4 @@
-<form action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/" method="post" id="contactForm" return="false"><textarea name="message" id="message" placeholder="..."></textarea><br/><input name="contactMethod" id="contactMethod" placeholder="phone or email"/><button id="sendButton">Send</button></form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><form id="contactForm" action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/" method="POST" onsubmit="return false"><textarea name="message" id="message" placeholder="..."></textarea><br/><input name="contactMethod" id="contactMethod" placeholder="phone or email"/><button id="sendButton" type="Submit">Send</button></form><script>$("#sendButton").click(function() {
+	document.getElementById('contactMethod').value = '';
+	document.getElementById('message').value = '';
+});</script>
