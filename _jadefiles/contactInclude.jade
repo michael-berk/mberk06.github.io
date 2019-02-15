@@ -1,14 +1,27 @@
 script(src="https://code.jquery.com/jquery-3.3.1.min.js")
 
-form(id="contactForm", action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", method="POST", onsubmit="return false")
-	textarea(name="message", id="message", placeholder="...")
-	br
-	input(name="contactMethod", id="contactMethod", placeholder="phone or email")
-	button(id="sendButton", type="Submit") Send
+#contact-content
+	//contact form
+	form(id="contactForm", action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", method="POST", onsubmit="return false")
+		textarea(name="message", id="message", placeholder="...")
+		br
+		input(name="contactMethod", id="contactMethod", placeholder="email")
+		button(id="sendButton", type="Submit") Send
 
-script.
-	$("#sendButton").click(function() {
-		document.getElementById('contactMethod').value = '';
-		document.getElementById('message').value = '';
-	});
+		//Social media links
+		#social-container1
+			#social-container2
+				a(href="https://github.com/mberk06")
+					img(class="icon", id="github", src="/assets/img/github.png")
+				a(href="https://www.linkedin.com/in/michael-berk-48783a146/")
+					img(class="icon", id="linkedin", src="/assets/img/linkedin.png")
+				a(href="https://stackoverflow.com/users/9040673/michael-berk")
+					img(class="icon", id="stackoverflow", src="/assets/img/stackoverflow.png")
+
+	script.
+		$("#sendButton").click(function() {
+			document.getElementById('contactMethod').value = '';
+			document.getElementById('message').value = '';
+		});
+		
 	
