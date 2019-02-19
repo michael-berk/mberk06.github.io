@@ -8,16 +8,6 @@
 		input(name="contactMethod", id="contactMethod", placeholder="email", autocomplete="false")
 		button(id="sendButton", type="Submit") Send
 
-		//Social media links
-		#social-container1
-			#social-container2
-				a(href="https://github.com/mberk06")
-					img(class="icon", id="github", src="/assets/img/github.png")
-				a(href="https://www.linkedin.com/in/michael-berk-48783a146/")
-					img(class="icon", id="linkedin", src="/assets/img/linkedin.png")
-				a(href="https://stackoverflow.com/users/9040673/michael-berk")
-					img(class="icon", id="stackoverflow", src="/assets/img/stackoverflow.png")
-
 	script.
 		$("#sendButton").click(function() {
 			document.getElementById('contactMethod').value = '';
