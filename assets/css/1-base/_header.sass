@@ -1,12 +1,14 @@
 .fixed-header
 	background-color: white
-	margin: 10px 20px 10px 30px
+	margin: 20px 20px 0 20px
 	font-size: 24px
 	color: black
 
 .fixed-header .nav-links
 	color: black
 	opacity: 0
+	float: right
+	margin: 10px 20px 10px 20px
 
 .fixed-header:hover .nav-links
 	opacity: 1
@@ -14,19 +16,15 @@
 	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
 	animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
 
-.nav-links
-	float: right
-	margin: 10px 20px 10px 20px
-
-.nav-links:hover
+.fixed-header .nav-links:hover
 	color: grey
 
 #home-icon
 	color: black
+	margin-top: 100px
 
 #home-icon:hover
 	color: grey
-	margin: 10px 20px 10px 20px
 
 
 /* ----------------------------------------------
@@ -36,22 +34,22 @@
 
 @-webkit-keyframes slide-bottom
   0%
-    -webkit-transform: translateY(0)
-    transform: translateY(0)
+    -webkit-transform: translateY(-15px)
+    transform: translateY(-15px)
 
   100%
-    -webkit-transform: translateY(10px)
-    transform: translateY(10px)
+    -webkit-transform: translateY(-8px)
+    transform: translateY(-8px)
 
 
 @keyframes slide-bottom
   0%
-    -webkit-transform: translateY(0)
-    transform: translateY(0)
+    -webkit-transform: translateY(-15px)
+    transform: translateY(-15px)
 
   100%
-    -webkit-transform: translateY(10px)
-    transform: translateY(10px)
+    -webkit-transform: translateY(-8px)
+    transform: translateY(-8px)
 
 
 

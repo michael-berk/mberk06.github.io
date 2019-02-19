@@ -22,12 +22,13 @@
 	justify-content: center
 	align-items: center
 
-//because with 3 descriptions
-#because
-	float: left
+#because-text
+	margin-left: 15%
+	margin-right: 15%
+	font-weight: normal
 
-#button-container
-	
+#because
+	float: right	
 
 .because-buttons
 	transform: translate(0, -25px)
@@ -43,25 +44,28 @@
 	display: grid
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) )
 	grid-gap: 5%
-	text-align: center
+	align-items: center
+	margin-top: 50px
+	margin-bottom: 150px
 
 .value-container //single value
 	display: grid
-	grid-template-columns: 250px
+	justify-items: center;
 	text-align: center
 
 //numerals
 .numeral
-	font-size: 140px
+	font-size: 110px
 	line-height: 0px
 	font-family: "Arial"
-	transform: scale(1, 1.3)
+	transform: scale(1, 1)
 	transform: translate(0, -10px)
 
 .values
 	transform-origin: center
 	transform: translate(0, -80px)
 	color: black
+	font-size: 30px
 
 //Experience
 #button-wrapper
