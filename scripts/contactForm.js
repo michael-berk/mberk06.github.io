@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-	handleSubmit = function() {
+	$("#sendButton").click(function() {
 		//check if forms are filled
 		var empty = false;
         $('form > input').each(function() {
@@ -12,18 +12,19 @@ $(document).ready(function() {
         });
 
         if (empty) {
-        	alert("Fill out all forms");
-            //$("form").submit(function(e){
-				//e.preventDefault();
-			//}); 
+            alert("input all fields");
+
         } else {
-            alert("Sent");
-            //$("form").submit(function(e){
-				//e.enableDefault();
-			//}); 
-            document.getElementById('contactMethod').value = '';
-			document.getElementById('message').value = '';
+            //get inputs
+            var messageV = $('#message').val();
+            var contactV = $('#contactMethod').val();
+
+
+            $.post( "https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", 
+                {message: messageV, contact: contactV})
+                .success(function( data ) {
+                    alert("Sent!");
+                });
         }
-        return true;
-	}
+	});
 });
