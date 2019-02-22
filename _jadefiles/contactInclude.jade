@@ -4,7 +4,7 @@ div(id="contact-content")
 	//contact form
 	//form(id="contactForm", action="https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", method="POST")
 
-	form(id="contactForm")
+	form(id="contactForm", onsubmit="return false")
 		textarea(name="message", id="message", placeholder="...", autocomplete="off")
 		br
 		input(name="contactMethod", id="contactMethod", placeholder="email", autocomplete="off")
