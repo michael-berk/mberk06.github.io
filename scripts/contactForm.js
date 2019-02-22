@@ -16,15 +16,25 @@ $(document).ready(function() {
 
         } else {
             //get inputs
-            var messageV = $('#message').val();
-            var contactV = $('#contactMethod').val();
+            alert("sending");
 
-
-            $.post( "https://hooks.zapier.com/hooks/catch/2689457/xiooqx/", 
-                {message: messageV, contact: contactV})
-                .success(function( data ) {
-                    alert("Sent!");
-                });
+            var data = {
+                message : $('#message').val(),
+                contact : $('#contactMethod').val()
+            };
+            
+            $.ajax({
+                type : 'POST',
+                url : 'https://hooks.zapier.com/hooks/catch/2689457/xiooqx/',  
+                data: JSON.stringify(data),
+                success:function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function(xhr, status, error) {
+                    // handle error
+                    alert(error);
+                }
+            });
         }
 	});
 });
