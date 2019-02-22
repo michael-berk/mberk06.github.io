@@ -1,0 +1,4 @@
+name: Michael Berk
+markdown: redcarpet
+#highlighter: pygments # or rouge or null - REMOVED
+exclude: ["node_modules", "gulpfile.js", "package.json"]

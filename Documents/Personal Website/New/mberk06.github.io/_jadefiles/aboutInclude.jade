@@ -1,0 +1,48 @@
+script(src="/scripts/becauseButtons.js") //handle button clicks
+
+script(src="http://d3js.org/d3.v3.min.js") //d3 data library
+script(src="/wordcloud/d3.layout.cloud.js") //d3 clouds
+script(src="/wordcloud/wordcloud.js") //implementation of wordclouds
+//UNCOMMENT ABOVE LINE FOR WORD CLOUD
+
+.opener-container
+	h1(id="opener") I Love<br>Building
+
+#about-content
+
+	#because-container
+		h2(id="becuase", class="main-sentence") ..because I can: 
+		button(id="b_clutter", class="because-buttons") reduce<br>clutter. 
+		button(id="b_improvement", class="because-buttons") improve<br>myself.
+		button(id="b_money", class="because-buttons") make money<br>while I sleep.
+	h3(id="because-text", script="$('#because-text').load('/text/because_clutter.txt');")
+
+	h2(class="main-sentence") But, what values drives me to build?
+	#values-container
+		.value-container
+			h2(class="numeral") I
+			h3(class="values") Personal Growth
+		.value-container
+			h2(class="numeral") II
+			h3(class="values") Ambition
+		.value-container
+			h2(class="numeral") III
+			h3(class="values") Pleasure
+		.value-container
+			h2(class="numeral") IV
+			h3(class="values") Grit
+		.value-container
+			h2(class="numeral") V
+			h3(class="values") Impact
+		.value-container
+			h2(class="numeral") VI
+			h3(class="values") Self-Exploration
+
+	h2(class="main-sentence") Usting these values, I try to incorporate...
+	div(id="wordcloud-container")
+	//reference for word cloud (couldn't get #wordcloud-container to work) !!!!!!!!!!!!!!!!!!!
+	
+	h2(class="main-sentence") Here's what I've done so far
+	#button-wrapper
+		form(action="/experience")
+			input(id="experience-button", type="submit", value="Experience")
