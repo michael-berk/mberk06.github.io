@@ -4,23 +4,22 @@ $(document).ready(function() {
 
 	$("#sendButton").click(function() {
 		//check if forms are filled
-		var empty = false;
-        $('form > input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
+        var m = $('#message').val();
+        var c = $('#contactMethod').val()
 
-        if (empty) {
-            alert("input all fields");
+        if (m == '') {
+            $('#message').css('border-color', 'red');
+        }
 
-        } else {
+        if (c == '') {
+            $('#contactMethod').css('border-color', 'red');
+        }
+
+        if (m != '' && c != '') {
             //get inputs
-            alert("sending");
-
             var data = {
-                message : $('#message').val(),
-                contact : $('#contactMethod').val()
+                message : m,
+                contact : c
             };
             
             $.ajax({
@@ -28,13 +27,27 @@ $(document).ready(function() {
                 url : 'https://hooks.zapier.com/hooks/catch/2689457/xiooqx/',  
                 data: JSON.stringify(data),
                 success:function (data) {
-                    alert(JSON.stringify(data));
+                    //remove input fields and display sent messsage
+                    $("#message").hide();
+                    $("#contactMethod").hide();
+                    $("#sendButton").hide();
+                    $("#sendButton").prop("disabled",true)
+                    $("#sentText").css("visibility", "visible");
                 },
                 error: function(xhr, status, error) {
                     // handle error
-                    alert(error);
+                    alert("There was an error");
                 }
             });
         }
 	});
+
+    //reset text fields when user edits
+    $("#message").keypress(function () {
+        $("#message").css("border-color", "black");
+    });
+
+    $("#contactMethod").keypress(function () {
+        $("#contactMethod").css("border-color", "black");
+    });
 });
