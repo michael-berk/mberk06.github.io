@@ -1,9 +1,5 @@
 script(src="/scripts/becauseButtons.js") //handle button clicks
-
-script(src="http://d3js.org/d3.v3.min.js") //d3 data library
-script(src="/wordcloud/d3.layout.cloud.js") //d3 clouds
-//script(src="/wordcloud/wordcloud.js") //implementation of wordclouds
-//UNCOMMENT ABOVE LINE FOR WORD CLOUD
+script(src="/scripts/wordcloud.js") //handle wordcloud mouseover
 
 .opener-container
 	h1(id="opener") I Love<br>Building
@@ -40,9 +36,16 @@ script(src="/wordcloud/d3.layout.cloud.js") //d3 clouds
 
 	h2(class="main-sentence") Usting these values, I try to incorporate...
 	#wordcloud-container
-	//reference for word cloud (couldn't get #wordcloud-container to work) !!!!!!!!!!!!!!!!!!!
-	
+		script.
+			$('#wordcloud-container').load('/wordcloud/wordcloud.svg');
+
+			$("#cloud-text").css("fill","red");
+
 	h2(class="main-sentence") Here's what I've done so far
 	#button-wrapper
 		form(action="/experience")
 			input(id="experience-button", type="submit", value="Experience")
+
+
+
+
