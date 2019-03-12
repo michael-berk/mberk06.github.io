@@ -38,4 +38,3 @@ $('#someid').click(function() {
 	alert("hi");
 	//$( this ).setAttribute("src","/assets/img/bubbleHover.png");
 });*/
-
