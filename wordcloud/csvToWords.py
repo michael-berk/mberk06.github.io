@@ -18,5 +18,5 @@ for row in data:
 outputs.close()
 
 #Next Steps:
-#1. Download svg into directory (as wordcloud.svg)
+#1. Download svg into directory (as wordcloud-original.svg)
 #2. Add id="wordcloud-svg" to svg file
