@@ -1,14 +1,47 @@
-#experience-content
-    background: blue
-    bottom: 0
-    left: 0
-    position: fixed
-    right: 0
-    top: 0
+#background-gradient
+    background-color: blue
     z-index: -1
+    position: fixed
+    width: 100%
+    height: 100%
+
+#experience-content
+    position: fixed
+    width: 70%
+    height: 100%
+    margin-right: 15%
+    margin-left: 15%
+    overflow: auto
+
+#depth-container
+    float: left
+    width: 30%
+    height: 100%
+    text-align: center
+    vertical-align: middle
+
+#bubbles-container //all values
+    float: right
+    width: 70%
+
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) )
+    grid-gap: 5%
+    align-items: center
+    margin-top: 50px
+    margin-bottom: 150px
+
+.bubble-container //single value
+    display: grid
+    justify-items: center;
+    text-align: center
 
 .bubble
     text-align: center
+    height: 300px
+    left: 10px
+    position: relative
+    width: 300px
 
     background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%)
     /* FF3.6+
@@ -31,18 +64,9 @@
     -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3)
     -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3)
     box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3)
-    content: ""
-    height: 300px
-    left: 10px
-    position: absolute
-    width: 300px
-
-        margin-top: 110px
-        color: white
 
 .desc-text
     color: white
-    margin-top: 110px
 
 .bubble:hover
     width: 300px;
@@ -58,6 +82,7 @@
 
 .desc-hover
     display: none
+
 
 
 
