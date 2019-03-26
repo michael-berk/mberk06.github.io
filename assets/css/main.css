@@ -516,7 +516,8 @@ footer {
   margin-bottom: 90vh; }
 
 .main-sentence {
-  display: inline-block; }
+  display: inline-block;
+  margin-top: 10vh; }
 
 #about-content {
   margin-left: 15%;
@@ -546,8 +547,8 @@ footer {
   float: right; }
 
 .because-buttons {
-  -webkit-transform: translate(0, -25px);
-          transform: translate(0, -25px);
+  -webkit-transform: translate(0, -15px);
+          transform: translate(0, -15px);
   font-size: 24px;
   text-transform: none;
   height: 55px;
@@ -560,14 +561,13 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 5%;
   -ms-flex-align: center;
-      align-items: center;
-  margin-top: 50px;
-  margin-bottom: 150px; }
+      align-items: center; }
 
 .value-container {
   display: grid;
   justify-items: center;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: -50px; }
 
 .numeral {
   font-size: 110px;
@@ -585,6 +585,10 @@ footer {
           transform: translate(0, -80px);
   color: black;
   font-size: 30px; }
+
+#wordcloud-container {
+  margin-left: 5vw;
+  position: relative; }
 
 .wordcloud-word {
   cursor: pointer; }
