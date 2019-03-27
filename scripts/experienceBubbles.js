@@ -78,7 +78,7 @@ function createTicks(date1, date2) {
 //Call functions
 //////////////////////
 $(document).ready(function() {
-	var child = createBubble("NBA Lineup","2-2019");
+	/*var child = createBubble("NBA Lineup","2-2019");
 	var child1 = createBubble("Something Else","11-2018");
 	var child2 = createBubble("Another one","6-2018");
 
@@ -90,7 +90,20 @@ $(document).ready(function() {
 	for (i = 0; i < dates.length-1; i++) {
 		createTicks(dates[0], dates[1]);
 		createTicks(dates[1], dates[2]);
-	}
+	}*/
 
+	//handle modal clicks
+	$('.bubble-button').click(function(){
+	  var buttonId = $(this).attr('id');
+	  $('#modal-container').removeAttr('class').addClass(buttonId);
+	  $('body').addClass('modal-active');
+	})
 
+	$('#modal-container').click(function(){
+	  $(this).addClass('out');
+	  $('body').removeClass('modal-active');
+	});
 });
+
+
+

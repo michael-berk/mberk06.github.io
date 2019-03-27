@@ -28,18 +28,20 @@ $( document ).ready(function() {
 });
 
 var initButtons = function(text) {
-	$("#because-text").text(text);
+	$("#because-text1").text(text[0]);
+	$("#because-text2").text(text[1]);
 	$("#b_clutter").css("color", "red");
 }
 
 var toggleButtons = function(buttonNum, v) {
 	//get correct buttons
-	var texts = [v.clutter,v.improvement,v.money]; //
-	var buttons = ["clutter","improvement","money"]; //
+	var texts = [v.clutter,v.improvement,v.money];
+	var buttons = ["clutter","improvement","money"];
 	var buttonPressed = buttons.splice(buttonNum-1,1);
 
 	$("#b_"+buttonPressed).css('color','red'); //change color
-	$("#because-text").text(texts[buttonNum-1]); //render new text
+	$("#because-text1").text(texts[buttonNum-1][0]); //render new text
+	$("#because-text2").text(texts[buttonNum-1][1]); //render new text
 	
 	//toggle other button color
 	for (i = 0; i < 2; i++) {
