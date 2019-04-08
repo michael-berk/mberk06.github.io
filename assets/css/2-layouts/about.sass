@@ -6,6 +6,7 @@
 #about-content
 	margin-left: 15%
 	margin-right: 15%
+	width: 70%
 
 //////////////////////
 //css in order on page
@@ -31,11 +32,12 @@
 	font-size: 24px
 	color: black
 
-#because
+#because-button-container
 	float: right	
+	transform: translate(0, 65px)
+	display: block
 
 .because-buttons
-	transform: translate(0, -15px)
 	font-size: 24px
 	text-transform: none
 	height: 55px
@@ -71,8 +73,7 @@
 	font-size: 30px
 
 //wordcloud
-#wordcloud-container
-	margin-left: 5vw
+.wordcloud-container
 	position: relative
 
 .wordcloud-word
@@ -87,7 +88,27 @@
 	font-size: 50px
 	height: 60px
 
+///////////////////
+//Mobile
+///////////////////
+//move worcloud down
+@media (max-width: 751px)
+	#wordcloud-sentence
+		margin-top: 400px
 
+//reposition because buttons
+@media (max-width: 1125px)
+	#because-button-container
+		float: left
+		transform: translate(0,-10px)
+		width: 100%
+		margin-left: 20%
+		margin-bottom: 10px
+
+@media (max-width: 700px)
+	#because-button-container
+		float: left
+		width: 100%
 
 
 

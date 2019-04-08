@@ -521,7 +521,8 @@ footer {
 
 #about-content {
   margin-left: 15%;
-  margin-right: 15%; }
+  margin-right: 15%;
+  width: 70%; }
 
 #opener {
   text-align: center;
@@ -545,12 +546,13 @@ footer {
   font-size: 24px;
   color: black; }
 
-#because {
-  float: right; }
+#because-button-container {
+  float: right;
+  -webkit-transform: translate(0, 65px);
+          transform: translate(0, 65px);
+  display: block; }
 
 .because-buttons {
-  -webkit-transform: translate(0, -15px);
-          transform: translate(0, -15px);
   font-size: 24px;
   text-transform: none;
   height: 55px;
@@ -588,8 +590,7 @@ footer {
   color: black;
   font-size: 30px; }
 
-#wordcloud-container {
-  margin-left: 5vw;
+.wordcloud-container {
   position: relative; }
 
 .wordcloud-word {
@@ -605,10 +606,28 @@ footer {
   font-size: 50px;
   height: 60px; }
 
+@media (max-width: 751px) {
+  #wordcloud-sentence {
+    margin-top: 400px; } }
+
+@media (max-width: 1125px) {
+  #because-button-container {
+    float: left;
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+    width: 100%;
+    margin-left: 20%;
+    margin-bottom: 10px; } }
+
+@media (max-width: 700px) {
+  #because-button-container {
+    float: left;
+    width: 100%; } }
+
 #contact-content {
   border-color: black;
   border-opacity: 0.5;
-    border-opacity-outline: none;
+  outline: none;
   margin-bottom: 90vh; }
 
 #message {
@@ -659,18 +678,16 @@ footer {
   margin-top: -25px;
   visibility: hidden; }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   #contactMethod {
-    margin-bottom: 40px;
-    width: 96.3%; }
+    width: 80%;
+    margin-left: 8%; }
   #sendButton {
-    margin-left: 30%;
-    margin-right: 30%;
-    width: 40%; }
+    margin-top: 100px; }
   #contactMethod, #sendButton {
     display: block;
-    float: left;
-    position: relative; } }
+    float: none;
+    clear: both; } }
 
 #background-gradient {
   background-color: blue;

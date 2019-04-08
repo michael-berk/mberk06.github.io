@@ -1,7 +1,7 @@
 script(src="/scripts/becauseButtons.js") //handle button clicks
 script(src="/scripts/wordcloud.js") //handle wordcloud mouseover
 
-meta(name="viewport",content="width=device-wdith")
+meta(name="viewport", content="width=device-width, initial-scale=1")
 
 .opener-container
 	h1(id="opener") I Love<br>Building
@@ -9,9 +9,10 @@ meta(name="viewport",content="width=device-wdith")
 #about-content
 	#because-container
 		h2(id="becuase", class="main-sentence") ...because I can: 
-		button(id="b_clutter", class="because-buttons") reduce<br>clutter. 
-		button(id="b_improvement", class="because-buttons") improve<br>myself.
-		button(id="b_money", class="because-buttons") make money<br>while I sleep.
+		#because-button-container
+			button(id="b_clutter", class="because-buttons") reduce<br>clutter. 
+			button(id="b_improvement", class="because-buttons") improve<br>myself.
+			button(id="b_money", class="because-buttons") make money<br>while I sleep.
 	p(id="because-text1", class="because-text")
 	p(id="because-text2", class="because-text")
 
@@ -36,10 +37,12 @@ meta(name="viewport",content="width=device-wdith")
 			h2(class="numeral") VI
 			h3(class="values") Self-Exploration
 
-	h2(class="main-sentence") Usting these values, I try to incorporate...
-	#wordcloud-container
+	h2(class="main-sentence", id="wordcloud-sentence") Usting these values, I try to incorporate...
+	.wordcloud-container
+		img(id="wordcloud-mobile", src="/assets/img/wordcloud-mobile.png",style="width:100%")
+
 		script.
-			$('#wordcloud-container').load('/wordcloud/wordcloud.svg');
+			//$('.wordcloud-container').load('/wordcloud/wordcloud.svg');
 
 	h2(class="main-sentence") Here's what I've done so far...
 	#button-wrapper
