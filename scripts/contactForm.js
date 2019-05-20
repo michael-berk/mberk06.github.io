@@ -8,11 +8,11 @@ $(document).ready(function() {
         var c = $('#contactMethod').val()
 
         if (m == '') {
-            $('#message').css('border-color', 'red');
+            $('#message').css('border-color', '#5D95D0');
         }
 
         if (c == '') {
-            $('#contactMethod').css('border-color', 'red');
+            $('#contactMethod').css('border-color', '#5D95D0');
         }
 
         if (m != '' && c != '') {
@@ -44,10 +44,10 @@ $(document).ready(function() {
 
     //reset text fields when user edits
     $("#message").keypress(function () {
-        $("#message").css("border-color", "black");
+        $("#message").css("border-color", "#1D2041");
     });
 
     $("#contactMethod").keypress(function () {
-        $("#contactMethod").css("border-color", "black");
+        $("#contactMethod").css("border-color", "#1D2041");
     });
 });
