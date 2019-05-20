@@ -18,7 +18,7 @@ input[type="button"]
   display: inline-block
   height: 20px
   padding: 0 30px
-  color: #555
+  color: $darkblue
   text-align: center
   font-size: 11px
   font-weight: 600
@@ -29,16 +29,15 @@ input[type="button"]
   white-space: nowrap
   background-color: transparent
   border-radius: 4px
-  border: 1px solid #bbb
+  border: 1px solid grey
   cursor: pointer
   box-sizing: border-box
 
   &:hover,
   &:active,
   &:focus
-    color: black
-    border-color: black
-    color: black
+    color: $darkblue
+    border-color: $darkblue
     outline: 0
  
 //links   
@@ -53,10 +52,10 @@ a
 
 //selection-colors
 ::selection
-  background: blue
+  background: $verylightblue
 
 ::-moz-selection
-  background: blue
+  background: $verylightblue
 
 img::selection
   background: transparent
@@ -65,14 +64,14 @@ img::-moz-selection
   background: transparent
 
 body
-  -webkit-tap-highlight-color: blue
+  -webkit-tap-highlight-color: $verylightblue
   
 //typogrpahy
 //	Headings
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
-  color: #222
+  color: $darkblue
   font-weight: bold
 
 .gigantic
@@ -114,7 +113,7 @@ strong
   font-weight: bold
 
 hr
-  border: solid #ddd
+  border: solid $darkblue
   border-width: 1px 0 0
   clear: both
   margin: 10px 0 30px

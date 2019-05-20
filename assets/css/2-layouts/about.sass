@@ -2,6 +2,8 @@
 .main-sentence
 	display: inline-block
 	margin-top: 10vh
+	font-size: 50px
+	color: $darkblue
 
 #about-content
 	margin-left: 15%
@@ -13,14 +15,17 @@
 //////////////////////
 //opener
 #opener
+	margin-bottom: 20%
 	text-align: center
 	font-size: 100px
+	color: $darkblue
 
 .opener-container
 	width: 100%
 	height: 90vh
 	display: flex
-	background-color: grey
+	background-image: url(/assets/img/aboutOpener.png)
+	background-size: 100% 100%
 	justify-content: center
 	align-items: center
 
@@ -29,13 +34,15 @@
 	margin-left: 7%
 	margin-right: 7%
 	font-weight: normal
-	font-size: 24px
-	color: black
+	font-size: 18px
+	color: $darkblue
 
 #because-button-container
-	float: right	
-	transform: translate(0, 65px)
-	display: block
+	position: relative
+	float: left	
+	margin-bottom: 20px
+	width: 100%
+	text-align: center
 
 .because-buttons
 	font-size: 24px
@@ -44,6 +51,9 @@
 	padding: 10px 10px 50px 10px
 	text-align: center
 	margin-left: 10px
+	margin-bottom: 5px
+	width: 200px
+	color: $darkblue
 
 //values
 #values-container //all values
@@ -69,12 +79,19 @@
 .values
 	transform-origin: center
 	transform: translate(0, -80px)
-	color: black
+	color: $darkblue
 	font-size: 30px
 
 //wordcloud
-.wordcloud-container
+.wordcloud-container-svg
 	position: relative
+	width: 100%
+	height: 100%
+
+.wordcloud-container-img
+	position: relative
+	width: 100%
+	height: 100%
 
 .wordcloud-word
 	cursor: pointer
@@ -91,24 +108,31 @@
 ///////////////////
 //Mobile
 ///////////////////
-//move worcloud down
-@media (max-width: 751px)
+@media only screen and (max-width: 750px)
+	//format values
+	.value-container
+		margin-top: -40px
+	#values-container
+		margin-top: 40px
+		margin-bottom: -20px
+
+	//format wordcloud
 	#wordcloud-sentence
 		margin-top: 400px
 
-//reposition because buttons
-@media (max-width: 1125px)
-	#because-button-container
-		float: left
-		transform: translate(0,-10px)
-		width: 100%
-		margin-left: 20%
-		margin-bottom: 10px
+//switch between svg and img for wordcloud
+@media only screen and (max-width: 1050px)
+	#wordcloud-img
+		display: block
+	#wordcloud-svg
+		display: none
 
-@media (max-width: 700px)
-	#because-button-container
-		float: left
-		width: 100%
+
+@media only screen and (min-width: 1050px)
+	#wordcloud-img
+		display: none
+	#wordcloud-svg
+		display: block
 
 
 
