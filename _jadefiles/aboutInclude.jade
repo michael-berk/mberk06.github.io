@@ -17,26 +17,37 @@ h1(id="opener") I Love<br>Building
 			p(id="because-text1", class="because-text")
 			p(id="because-text2", class="because-text")
 
-	h2(class="main-sentence") But, what values drives me to build?
+	h2(class="main-sentence", id="values-sentence") 
+		| But, what motivates me to build
+		a(href="/assets/img/whytree.png", class="tooltip_about", id="question") ?
+			span.tooltiptext "This might seem like a lot, but I mapped how my values motivate me. Values in yellow boxes are one's I'm working on right now."
+
 	#values-container
 		.value-container
 			h2(class="numeral") I
-			h3(class="values") Personal Growth
+			h3(class="values") Growth
+				span.tooltiptext My Definition: improvement of myself and my skills
 		.value-container
 			h2(class="numeral") II
 			h3(class="values") Ambition
+				span.tooltiptext My Definition: setting and reaching demanding goals
 		.value-container
 			h2(class="numeral") III
 			h3(class="values") Pleasure
+				span.tooltiptext My Definition: emphasizing and enjoying the process
 		.value-container
 			h2(class="numeral") IV
 			h3(class="values") Grit
+				span.tooltiptext My Definition: achievement in difficult circumstances
 		.value-container
 			h2(class="numeral") V
 			h3(class="values") Impact
+				span.tooltiptext My Definition: effective contributions to my work
 		.value-container
 			h2(class="numeral") VI
-			h3(class="values") Self-Exploration
+			h3(class="values") Exploration
+				span.tooltiptext My Defenition: allowing curiosity motivate me
+
 
 	h2(class="main-sentence", id="wordcloud-sentence") Using these values, I try to incorporate...
 	.wordcloud-container-svg
@@ -46,11 +57,14 @@ h1(id="opener") I Love<br>Building
 	.wordcloud-container-img
 		img(id="wordcloud-img", src="/assets/img/wordcloud-mobile.png",style="width:100%")
 		
+	a(href="https://www.youtube.com/watch?v=SrlBgLdGKZM")
+		.tooltip_small(id="basketball")
+			span.tooltiptext "If you're curious, this is the best dunk of all time."
 
 	h2(class="main-sentence") Here's what I've done so far...
 	#button-wrapper
-		form(action="/experience.html")
-			input(id="experience-button", type="submit", value="Experience")
+		form(action="/experience#last")
+			input(id="experience-button", type="submit", value="experience")
 
 
 

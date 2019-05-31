@@ -8,11 +8,13 @@ $(document).ready(function() {
         var c = $('#contactMethod').val()
 
         if (m == '') {
-            $('#message').css('border-color', '#5D95D0');
+            $('#message').css('border-color', '#E4572E');
+            $('#message').css('border-width', '1.5px');
         }
 
         if (c == '') {
-            $('#contactMethod').css('border-color', '#5D95D0');
+            $('#contactMethod').css('border-color', '#E4572E');
+            $('#contactMethod').css('border-width', '1.5px');
         }
 
         if (m != '' && c != '') {
@@ -45,9 +47,11 @@ $(document).ready(function() {
     //reset text fields when user edits
     $("#message").keypress(function () {
         $("#message").css("border-color", "#1D2041");
+        $("#message").css("border-width", "0.5px");
     });
 
     $("#contactMethod").keypress(function () {
         $("#contactMethod").css("border-color", "#1D2041");
+        $("#contactMethod").css("border-width", "0.5px");
     });
 });

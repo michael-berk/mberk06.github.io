@@ -3,10 +3,14 @@ script(src="/scripts/contactForm.js")
 div(id="contact-content")
 	//contact form
 	form(id="contactForm", onsubmit="return false")
+		.tooltip_small(id="mail")
+			span.tooltiptext "Thanks for exploring my site. Hopefully you learned a little about me. Got any questions or ideas?"
 		textarea(name="message", id="message", placeholder="...", autocomplete="off")
 		br
 		input(name="contactMethod", id="contactMethod", placeholder="email", autocomplete="off")
 		button(id="sendButton", type="Submit") Send
+
+
 
 
 //sent button

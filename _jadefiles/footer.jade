@@ -1,9 +1,13 @@
-footer
+footer(id="footer")
 	#social-container1
-		hr(style="transform: translate(0, -15px)")
-		p(id="footer-name", href="/") Michael Berk 
+		hr
+		a(href="/")
+			p(id="footer-name") Michael Berk 
+
+		.tooltip_right(id="sushi")
+			span.tooltiptext "My second passion is food. My favorite cuisine is sushi (because of childhood priming), but I will eat literally anything."
+
 		#social-container2
-			
 			//Social media links
 			a(href="https://github.com/mberk06")
 				img(class="icon", id="github", src="/assets/img/github.png")

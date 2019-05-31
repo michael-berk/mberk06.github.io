@@ -8,8 +8,6 @@
 #about-content
 	margin-left: 15%
 	margin-right: 15%
-	width: 70%
-
 //////////////////////
 //css in order on page
 //////////////////////
@@ -20,12 +18,9 @@
 	height: 100vh
 	display: flex
 	background-image: url(/assets/img/Blueprint.png)
-	//background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/Blueprint1.png')
-	//background-image: linear-gradient($verylightblue, $lightblue)
 	background-size: 100%
 	justify-content: center
 	align-items: center
-	filter: blur(0px)
 
 #opener
 	text-align: center
@@ -69,6 +64,14 @@
 	width: 200px
 	color: $darkblue
 
+#values-sentence
+	margin-right: -40px
+
+#question
+	color: $darkblue
+	text-decoration: none
+	
+
 //values
 #values-container //all values
 	display: grid
@@ -95,6 +98,20 @@
 	transform: translate(0, -80px)
 	color: $darkblue
 	font-size: 30px
+	.tooltiptext
+		font-size: 14px
+		visibility: hidden
+		width: 250px
+		background-color: $darkblue
+		color: $white
+		text-align: center
+		border-radius: 4px
+		top: 110%
+		display: block
+		right: -150px
+		padding: 10px 10px 10px 10px
+	&:hover .tooltiptext
+		visibility: visible
 
 //wordcloud
 .wordcloud-container-svg
@@ -110,6 +127,17 @@
 .wordcloud-word
 	cursor: pointer
 
+#basketball
+	width: 50px
+	height: 50px
+	margin-left: auto
+	margin-right: auto
+	bottom: 20px
+	display: block
+	opacity: 1
+	background-image: url(/assets/img/basketball.png)
+	background-size: contain
+
 //Experience
 #button-wrapper
 	display: flex
@@ -118,6 +146,16 @@
 #experience-button
 	font-size: 50px
 	height: 60px
+	font-size: 30px
+	text-transform: none
+	padding: 0
+	text-align: center
+	width: 200px
+	color: $sand
+#experience-button:hover
+	color: $darkblue
+	border-width: 2px
+
 
 ///////////////////
 //Mobile
@@ -136,6 +174,7 @@
 	.opener-container
 		background: none
 
+
 //switch between svg and img for wordcloud
 @media only screen and (max-width: 1050px)
 	#wordcloud-img
@@ -150,6 +189,14 @@
 	#wordcloud-svg
 		display: block
 
+//beause text (no change of height)
+@media only screen and (min-width: 1080px)
+	#because-container
+		min-height: 80vh
+
+@media only screen and (min-width: 800px)
+	#because-container
+		min-height: 90vh
 
 
 

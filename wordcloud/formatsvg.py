@@ -7,7 +7,7 @@ import csv
 import random
 
 #Constants
-col = "grey"
+col = "#DCDCDD"
 className = "wordcloud-word"
 
 #Read in svg as string

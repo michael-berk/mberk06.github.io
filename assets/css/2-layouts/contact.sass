@@ -42,6 +42,17 @@
 	font-size: 14px
 	border-color: $darkblue
 
+#mail
+  width: 75px
+  height: 75px
+  margin-right: auto
+  margin-left: auto
+  display: block
+  opacity: 1
+  background-image: url(/assets/img/mail.png)
+  background-size: contain
+  z-index: 1000000
+
 #sentText
 	position: absolute    
 	width: 100px
@@ -52,7 +63,17 @@
 	margin-top: -25px
 	visibility: hidden
 
+::placeholder
+  color: $darkblue
+  opacity: 0.5
 
+:-ms-input-placeholder 
+  color: $darkblue
+  opacity: 0.5
+
+::-ms-input-placeholder
+  color: $darkblue
+  opacity: 0.5
 
 ///////////////////////////
 //Mobile

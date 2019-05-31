@@ -13,19 +13,29 @@
 #experience-background
     background-image: linear-gradient($lightblue, $darkblue)
     margin: 0
+    margin-bottom: -85px
 
 #scuba
   width: 50px
-  height: auto
+  height: 50px
+  margin-right: 40px
+  transform: translate(50px, 0)
   display: block
-  margin-left: auto
-  margin-right: auto
-  transform: translate(0, 50px)
   opacity: 1
-  z-index: 10000
-  position: relative
-#scuba:hover
-  opacity: 0.5
+  background-image: url(/assets/img/scuba_dark.png)
+  background-size: contain
+  z-index: 1000000
+
+#shark
+  width: 75px
+  height: 75px
+  margin-right: 40px
+  transform: translate(50px, 0)
+  display: block
+  opacity: 1
+  background-image: url(/assets/img/shark.png)
+  background-size: contain
+  z-index: 1000000
 
 .container
   width: 80%
@@ -62,10 +72,16 @@
 
 .timeline-block-right
   float: right
+  h3
+    text-align: left
+
 
 .timeline-block-left
   float: left
   direction: rtl
+  h3
+    text-align: right
+
 
 .marker
   width: 16px
@@ -88,11 +104,11 @@
   h3
     margin-top: 5px
     margin-bottom: 5px
-    font-size: 25px
-    font-weight: 500
+    font-size: 30px
+    font-weight: 1
     color: $white
   span
-    font-size: 16px
+    font-size: 17px
     color: $white
     font-style: italic
 
@@ -101,6 +117,9 @@
     line-height: 1.5em
     word-spacing: 1px
     color: $white
+
+  .skill
+    font-style: italic
 
 @media screen and (max-width: 768px)
   .container:before

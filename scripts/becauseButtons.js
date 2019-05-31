@@ -31,8 +31,8 @@ var initButtons = function(text) {
 	$("#because-text1").text(text[0]);
 	$("#because-text2").text(text[1]);
 	$("#b_clutter").css("border-color", "#1D2041");
-	$("#b_improvement").css("color", "grey");
-	$("#b_money").css("color", "grey");
+	$("#b_improvement").css("color", "#DCDCDD");
+	$("#b_money").css("color", "#DCDCDD");
 }
 
 var toggleButtons = function(buttonNum, v) {
@@ -48,7 +48,7 @@ var toggleButtons = function(buttonNum, v) {
 	
 	//toggle other button color
 	for (i = 0; i < 2; i++) {
-		$("#b_"+buttons[i]).css('color','grey');
-		$("#b_"+buttons[i]).css('border-color','grey');
+		$("#b_"+buttons[i]).css('color','#DCDCDD');
+		$("#b_"+buttons[i]).css('border-color','#DCDCDD');
 	}
 }
