@@ -7,15 +7,25 @@
   outline: none
 
 .exp-hr
-  border: solid #F5F7FA 
+  border: solid $white
   border-width: 1px 0 0
 
 #experience-background
     background-image: linear-gradient($lightblue, $darkblue)
     margin: 0
-    width: auto
-    height: auto
 
+#scuba
+  width: 50px
+  height: auto
+  display: block
+  margin-left: auto
+  margin-right: auto
+  transform: translate(0, 50px)
+  opacity: 1
+  z-index: 10000
+  position: relative
+#scuba:hover
+  opacity: 0.5
 
 .container
   width: 80%
@@ -33,7 +43,7 @@
     margin-left: -1px
     width: 2px
     height: 100%
-    background: #DCDCDD
+    background: $sand
     z-index: 1
 
 .timeline-block
@@ -61,36 +71,36 @@
   width: 16px
   height: 16px
   border-radius: 50%
-  border: 2px solid #F5F7FA
-  background: #F5F7FA
+  border: 2px solid $white
+  background: $white
   margin-top: 10px
   z-index: 9999
 
 .marker:hover
   background: transparent
-  border: 2px solid #F5F7FA
+  border: 2px solid $white
 
 .timeline-content
   width: 95%
   padding: 0 15px
-  color: #F5F7FA
+  color: $white
   transform: translate(0, 8px)
   h3
     margin-top: 5px
     margin-bottom: 5px
     font-size: 25px
     font-weight: 500
-    color: #F5F7FA
+    color: $white
   span
     font-size: 16px
-    color: #F5F7FA
+    color: $white
     font-style: italic
 
   p
     font-size: 14px
     line-height: 1.5em
     word-spacing: 1px
-    color: #F5F7FA
+    color: $white
 
 @media screen and (max-width: 768px)
   .container:before

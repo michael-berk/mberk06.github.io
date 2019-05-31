@@ -425,6 +425,34 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+.tooltip {
+  position: relative;
+  display: inline-block; }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px; }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent black transparent; }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
+
 #navbar {
   overflow: hidden;
   width: 200px;
@@ -440,7 +468,7 @@ hr {
   position: fixed;
   display: block;
   left: -115px;
-  width: 170px;
+  width: 190px;
   height: 100%;
   z-index: 500; }
   #primary_nav ul {
@@ -453,7 +481,7 @@ hr {
       padding: 0 0 25px 20px;
       color: #1D2041;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 17px;
       text-decoration: none;
       transition: all 0.2s ease; }
       #primary_nav ul li a:hover, #primary_nav ul li a:active {
@@ -466,8 +494,8 @@ hr {
   font-size: 36px;
   position: relative;
   display: inline-block;
-  top: 10px;
-  left: 127px;
+  top: 20px;
+  left: 147px;
   color: #1D2041;
   z-index: 1000;
   -khtml-user-select: none;
@@ -478,6 +506,60 @@ hr {
       user-select: none; }
   #mobile_nav:hover {
     color: #5D95D0; }
+
+#navbar_dark {
+  overflow: hidden;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #DCDCDD;
+  z-index: 499; }
+
+#primary_nav_dark {
+  top: 0px;
+  position: fixed;
+  display: block;
+  left: -115px;
+  width: 190px;
+  height: 100%;
+  z-index: 500; }
+  #primary_nav_dark ul {
+    display: block;
+    margin-top: 80px;
+    padding-left: 5px;
+    list-style: none; }
+    #primary_nav_dark ul li a {
+      display: block;
+      padding: 0 0 25px 20px;
+      color: #DCDCDD;
+      font-weight: bold;
+      font-size: 17px;
+      text-decoration: none;
+      transition: all 0.2s ease; }
+      #primary_nav_dark ul li a:hover, #primary_nav_dark ul li a:active {
+        color: #1D2041;
+        padding-left: 17px;
+        text-decoration: none;
+        transition: all 0.2s ease; }
+
+#mobile_nav_dark {
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  top: 20px;
+  left: 147px;
+  color: #DCDCDD;
+  z-index: 1000;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none; }
+  #mobile_nav_dark:hover {
+    color: #1D2041; }
 
 footer {
   width: 100%;
@@ -516,7 +598,28 @@ footer {
   opacity: 1.0; }
 
 #home-container {
-  margin-bottom: 90vh; }
+  margin-bottom: 30vh; }
+
+#home_opener1 {
+  margin-top: 15%;
+  text-align: center; }
+
+#home_opener2 {
+  margin-left: 20%;
+  margin-top: -30px;
+  font-style: italic;
+  text-align: center; }
+
+#hi {
+  width: 75px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  opacity: 1; }
+
+#hi:hover {
+  opacity: 0.5; }
 
 .main-sentence {
   display: inline-block;
@@ -534,7 +637,7 @@ footer {
   height: 100vh;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(/assets/img/Blueprint4.png);
+  background-image: url(/assets/img/Blueprint.png);
   background-size: 100%;
   -ms-flex-pack: center;
       justify-content: center;
@@ -734,9 +837,22 @@ footer {
 
 #experience-background {
   background-image: linear-gradient(#5D95D0, #1D2041);
-  margin: 0;
-  width: auto;
-  height: auto; }
+  margin: 0; }
+
+#scuba {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  opacity: 1;
+  z-index: 10000;
+  position: relative; }
+
+#scuba:hover {
+  opacity: 0.5; }
 
 .container {
   width: 80%;
