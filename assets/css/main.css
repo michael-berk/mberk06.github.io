@@ -310,7 +310,8 @@ body {
   font-family: 'Fira Sans', sans-serif;
   color: #1D2041;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  width: 100vw; }
 
 .button,
 button,
@@ -370,7 +371,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #CCE5FE; }
+  -webkit-tap-highlight-color: transparent; }
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
@@ -700,10 +701,17 @@ hr {
   #mobile_nav_dark:hover {
     color: #1D2041; }
 
+@media only screen and (max-width: 750px) {
+  #mobile_nav {
+    -webkit-transform: translate(-15px);
+            transform: translate(-15px); }
+  #mobile_nav_dark {
+    -webkit-transform: translate(-30px);
+            transform: translate(-30px); } }
+
 footer {
   width: 100%;
   height: 30px;
-  position: relative;
   bottom: 0;
   position: relative;
   -webkit-transform: translate(0, 75px);
@@ -749,25 +757,20 @@ footer {
 .icon:hover {
   opacity: 1.0; }
 
+@media only screen and (max-width: 750px) {
+  #sushi {
+    display: none; } }
+
 #home-container {
   height: 100vh;
-  margin-bottom: -90px;
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
-      justify-content: center; }
-
-#home_opener1 {
-  margin-top: 15%;
-  text-align: center; }
-
-#home_opener2 {
-  margin-left: 10%;
-  margin-top: -30px;
-  font-style: italic;
-  text-align: center; }
+      justify-content: center;
+  margin-bottom: -85px; }
 
 #hi {
   width: 75px;
@@ -818,7 +821,7 @@ footer {
   margin-left: 7%;
   margin-right: 7%;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   color: #1D2041;
   text-align: justify; }
 
@@ -909,6 +912,8 @@ footer {
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 15%;
+  margin-top: 50px;
   bottom: 20px;
   display: block;
   opacity: 1;
@@ -929,13 +934,17 @@ footer {
   padding: 0;
   text-align: center;
   width: 200px;
-  color: #DCDCDD; }
+  color: #DCDCDD;
+  margin-bottom: 20vh;
+  margin-top: 20px; }
 
 #experience-button:hover {
   color: #1D2041;
   border-width: 2px; }
 
 @media only screen and (max-width: 750px) {
+  .because-text {
+    text-align: left; }
   .value-container {
     margin-top: -40px; }
   #values-container {
@@ -943,8 +952,12 @@ footer {
     margin-bottom: -20px; }
   #wordcloud-sentence {
     margin-top: 400px; }
-  .opener-container {
-    background: none; } }
+  .main-sentence {
+    font-size: 40px; }
+  .numeral {
+    font-size: 100px; }
+  .value-container {
+    margin-bottom: -100px; } }
 
 @media only screen and (max-width: 1050px) {
   #wordcloud-img {
@@ -1059,13 +1072,16 @@ footer {
 @media (max-width: 700px) {
   #contactMethod {
     width: 80%;
-    margin-left: 8%; }
-  #sendButton {
-    margin-top: 100px; }
-  #contactMethod, #sendButton {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    float: none;
-    clear: both; } }
+    position: relative; }
+  #sendButton {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none; } }
 
 * {
   box-sizing: border-box;
@@ -1149,7 +1165,7 @@ footer {
   border: 2px solid #F5F7FA;
   background: #F5F7FA;
   margin-top: 10px;
-  z-index: 9999; }
+  z-index: 10; }
 
 .marker:hover {
   background: transparent;
@@ -1187,7 +1203,11 @@ footer {
     width: 100%;
     margin-bottom: 30px; }
   .timeline-block-right {
-    float: none; }
-  .timeline-block-left {
     float: none;
-    direction: ltr; } }
+    text-align: left; }
+  .timeline-block-left {
+    float: left;
+    direction: ltr;
+    text-align: left; }
+    .timeline-block-left h3 {
+      text-align: left; } }

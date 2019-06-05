@@ -42,7 +42,7 @@
 	margin-left: 7%
 	margin-right: 7%
 	font-weight: normal
-	font-size: 18px
+	font-size: 20px
 	color: $darkblue
 	text-align: justify
 
@@ -132,6 +132,8 @@
 	height: 50px
 	margin-left: auto
 	margin-right: auto
+	margin-bottom: 15%
+	margin-top: 50px
 	bottom: 20px
 	display: block
 	opacity: 1
@@ -152,6 +154,8 @@
 	text-align: center
 	width: 200px
 	color: $sand
+	margin-bottom: 20vh
+	margin-top: 20px
 #experience-button:hover
 	color: $darkblue
 	border-width: 2px
@@ -161,6 +165,9 @@
 //Mobile
 ///////////////////
 @media only screen and (max-width: 750px)
+	//format because text
+	.because-text
+		text-align: left
 	//format values
 	.value-container
 		margin-top: -40px
@@ -171,8 +178,15 @@
 	//format wordcloud
 	#wordcloud-sentence
 		margin-top: 400px
-	.opener-container
-		background: none
+
+	//resize text
+	.main-sentence
+		font-size: 40px
+	.numeral
+		font-size: 100px
+	.value-container
+		margin-bottom: -100px
+
 
 
 //switch between svg and img for wordcloud

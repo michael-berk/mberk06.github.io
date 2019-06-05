@@ -8,9 +8,12 @@ $(document).ready(function(){
 			$("#primary_nav").animate({left: "0px"}, 200);
 			$("body").css("overflow-x","hidden");
 			$("#primary_nav").css("overflow-y","hidden");
+			$("#primary_nav").css("background-color","rgba(220,220,221,0.95)");		
+
 		}else{
 			$("#primary_nav").animate({left: "-115px"}, 200);
-			$("body").css("overflow-x","hidden");			
+			$("body").css("overflow-x","hidden");
+			$("#primary_nav").css("background-color","rgba(220,220,221,0)");		
 		}
 
 	});
@@ -21,6 +24,8 @@ $(document).ready(function(){
 		}else{
 			$("#primary_nav").animate({left: "-115px"}, 200);
 			$("body").css("overflow-x","hidden");
+			$("#primary_nav").css("background-color","rgba(220,220,221,0)");		
+
 		}
 	});
 
@@ -31,11 +36,14 @@ $(document).ready(function(){
 			$("#primary_nav_dark").animate({left: "0px"}, 200);
 			$("body").css("overflow-x","hidden");
 			$("#primary_nav_dark").css("overflow-y","hidden");
+			$("#primary_nav_dark").css("background-color","rgba(93,149,208,0.95)");		
+
 		}else{
 			$("#primary_nav_dark").animate({left: "-115px"}, 200);
 			$("body").css("overflow-x","hidden");
-		}
+			$("#primary_nav_dark").css("background-color","rgba(220,220,221,0)");		
 
+		}
 	});
 
 
@@ -45,6 +53,8 @@ $(document).ready(function(){
 		}else{
 			$("#primary_nav_dark").animate({left: "-115px"}, 200);
 			$("body").css("overflow-x","hidden");
+			$("#primary_nav_dark").css("background-color","rgba(220,220,221,0)");		
+
 		}
 	});
 	 
