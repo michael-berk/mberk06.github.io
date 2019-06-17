@@ -449,6 +449,8 @@ hr {
       border-color: transparent transparent #1D2041 transparent; }
   .tooltip:hover .tooltiptext {
     visibility: visible; }
+  .tooltip:active .tooltiptext {
+    visibility: visible; }
 
 .tooltip_small {
   position: relative;
@@ -477,6 +479,8 @@ hr {
       border-style: solid;
       border-color: transparent transparent #1D2041 transparent; }
   .tooltip_small:hover .tooltiptext {
+    visibility: visible; }
+  .tooltip_small:active .tooltiptext {
     visibility: visible; }
 
 .tooltip_about {
@@ -508,6 +512,8 @@ hr {
       border-color: transparent transparent #1D2041 transparent; }
   .tooltip_about:hover .tooltiptext {
     visibility: visible; }
+  .tooltip_about:active .tooltiptext {
+    visibility: visible; }
 
 .tooltip_right {
   position: relative;
@@ -535,6 +541,8 @@ hr {
       border-style: solid;
       border-color: transparent #1D2041 transparent transparent; }
   .tooltip_right:hover .tooltiptext {
+    visibility: visible; }
+  .tooltip_right:active .tooltiptext {
     visibility: visible; }
 
 .tooltip_left {
@@ -564,6 +572,8 @@ hr {
       border-color: transparent transparent transparent #1D2041; }
   .tooltip_left:hover .tooltiptext {
     visibility: visible; }
+  .tooltip_left:active .tooltiptext {
+    visibility: visible; }
 
 .tooltip_shark {
   position: relative;
@@ -591,6 +601,8 @@ hr {
       border-style: solid;
       border-color: transparent transparent transparent #1D2041; }
   .tooltip_shark:hover .tooltiptext {
+    visibility: visible; }
+  .tooltip_shark:active .tooltiptext {
     visibility: visible; }
 
 #navbar {
@@ -1120,6 +1132,14 @@ footer {
   background-size: contain;
   z-index: 1000000; }
 
+.experience-bullets {
+  margin-top: 5px;
+  margin-bottom: 10px; }
+  .experience-bullets p {
+    margin-bottom: 0px;
+    margin-left: 5%;
+    font-size: 14px; }
+
 .container {
   width: 80%;
   padding: 50px 0;
@@ -1184,11 +1204,10 @@ footer {
     font-weight: 1;
     color: #F5F7FA; }
   .timeline-content span {
-    font-size: 17px;
+    font-size: 20px;
     color: #F5F7FA;
     font-style: italic; }
   .timeline-content p {
-    font-size: 14px;
     line-height: 1.5em;
     word-spacing: 1px;
     color: #F5F7FA; }
