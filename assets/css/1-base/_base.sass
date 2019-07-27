@@ -307,6 +307,29 @@ hr
       border-width: 5px
       border-style: solid
       border-color: transparent transparent transparent $darkblue
+    @media screen and (max-width: 768px)
+      visibility: hidden
+      font-size: 14px
+      width: 250px
+      background-color: $darkblue
+      color: $white
+      text-align: center
+      border-radius: 4px
+      padding: 5px 5px
+      position: absolute
+      z-index: 100000000
+      left: 110%
+      &::after
+        content: ""
+        position: absolute
+        top: 50%
+        right: 100%
+        margin-top: -5px
+        margin-left: -2000px
+        border-width: 5px
+        border-style: solid
+        border-color: transparent $darkblue transparent transparent
+   
   &:hover .tooltiptext
     visibility: visible
   &:active .tooltiptext
@@ -339,12 +362,36 @@ hr
       border-width: 5px
       border-style: solid
       border-color: transparent transparent transparent $darkblue
+    @media screen and (max-width: 768px)
+      visibility: hidden
+      font-size: 14px
+      width: 250px
+      background-color: $darkblue
+      color: $white
+      text-align: center
+      border-radius: 4px
+      padding: 5px 5px
+      position: absolute
+      z-index: 100000000
+      left: 110%
+      &::after
+        content: ""
+        position: absolute
+        top: 50%
+        right: 100%
+        margin-top: -5px
+        margin-left: -2000px
+        border-width: 5px
+        border-style: solid
+        border-color: transparent $darkblue transparent transparent
+   
   &:hover .tooltiptext
     visibility: visible
   &:active .tooltiptext
     visibility: visible
   &:click .tooltiptext
     visibility: visible
+
 
   
   

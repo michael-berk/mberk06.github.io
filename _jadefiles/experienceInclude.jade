@@ -45,7 +45,7 @@
 				p(class="skill") Skills: R, Data Cleaning, Regression
 
 				.tooltip_left(id="scuba")
-					span.tooltiptext "If you've never been diving, please go."&lrm;
+					span.tooltiptext(dir="ltr") "If you've never been diving, please go."&lrm;
 				br
 				br
 
@@ -103,9 +103,8 @@
 				span 2015
 				p At the Cape Eleuthera Institute, my main role was to assist marine biologists and PhD students in catching and tagging three species of sharks and rays. This involved setting up gear, collecting data measurements of the animals, and organizing the data for later analysis. &lrm;
 
-				a(id="shark_link", href="/assets/img/sharkworkup.png")
-					.tooltip_shark(id="shark")
-						span.tooltiptext "My passion for sharks started here, at CEI."&lrm;
+				span(class="tooltip_shark", id="shark")
+					<span class="tooltiptext" dir="ltr"> "My passion for sharks started<a href="/assets/img/sharkworkup.png")> here</a>, at CEI."&lrm; </span>
 				br
 				br
 
