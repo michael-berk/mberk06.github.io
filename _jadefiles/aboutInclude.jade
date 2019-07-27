@@ -19,8 +19,9 @@ h1(id="opener") I Love<br>Building
 
 	h2(class="main-sentence", id="values-sentence") 
 		| But, what motivates me to build
-		a(href="/assets/img/whytree.png", class="tooltip_about", id="question") ?
-			span.tooltiptext "This might seem like a lot, but I mapped how my values motivate me. Values in yellow boxes are one's I'm working on right now."
+		span(class="tooltip_question", id="question") ?
+			<span class="tooltiptext"> 
+			"This might seem like a lot, but I mapped how <a href="/assets/img/whytree.png")> my values </a> motivate me. Values in yellow boxes are one's I'm working on right now." </span>
 
 	#values-container
 		.value-container
@@ -56,10 +57,11 @@ h1(id="opener") I Love<br>Building
 
 	.wordcloud-container-img
 		img(id="wordcloud-img", src="/assets/img/wordcloud-mobile.png",style="width:100%")
-		
-	a(href="https://www.youtube.com/watch?v=SrlBgLdGKZM")
-		.tooltip_small(id="basketball")
-			span.tooltiptext "If you're curious, this is the best dunk of all time."
+
+	span(class="tooltip_basketball", id="basketball")
+			<span class="tooltiptext"> 
+			"If you're curious, this is the <a href="https://www.youtube.com/watch?v=SrlBgLdGKZM")>best dunk</a> of all time. </span>
+
 
 	h2(class="main-sentence") Here's what I've done so far...
 	#button-wrapper
