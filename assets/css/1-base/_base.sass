@@ -21,7 +21,6 @@ input[type="button"]
   padding: 0 30px
   color: $sand
   text-align: center
-  font-size: 11px
   font-weight: 600
   line-height: 20px
   letter-spacing: .1rem
@@ -181,37 +180,40 @@ hr
     visibility: visible
   &:active .tooltiptext
     visibility: visible
+  &:click .tooltiptext
+    visibility: visible
 
 .tooltip_question
   position: relative
   display: inline-block
   .tooltiptext
     font-weight: normal
-    font-size: 14px
-    width: 250px
-    border-radius: 4px
-    padding: 5px 5px
     visibility: hidden
+    font-size: 14px
+    width: 150px
     background-color: $darkblue
     color: $white
     text-align: center
+    border-radius: 4px
+    padding: 5px 5px
     position: absolute
     z-index: 100000000
-    top: 115%
-    right: -113px
-    opacity: 1
+    top: -25px
+    left: 110%
     &::after
       content: ""
       position: absolute
-      bottom: 100%
-      left: 50%
-      margin-left: -5px
+      top: 50%
+      right: 100%
+      margin-top: -5px
       border-width: 5px
       border-style: solid
-      border-color: transparent transparent $darkblue transparent
+      border-color: transparent $darkblue transparent transparent
   &:hover .tooltiptext
     visibility: visible
   &:active .tooltiptext
+    visibility: visible
+  &:click .tooltiptext
     visibility: visible
 
 .tooltip_basketball
@@ -229,7 +231,7 @@ hr
     text-align: center
     position: absolute
     z-index: 100000000
-    top: 115%
+    top: 110%
     right: -100px
     opacity: 1
     &::after
@@ -277,6 +279,8 @@ hr
     visibility: visible
   &:active .tooltiptext
     visibility: visible
+  &:click .tooltiptext
+    visibility: visible
 
 .tooltip_left
   position: relative
@@ -307,6 +311,8 @@ hr
     visibility: visible
   &:active .tooltiptext
     visibility: visible
+  &:click .tooltiptext
+    visibility: visible
 
 .tooltip_shark
   position: relative
@@ -336,6 +342,8 @@ hr
   &:hover .tooltiptext
     visibility: visible
   &:active .tooltiptext
+    visibility: visible
+  &:click .tooltiptext
     visibility: visible
 
   

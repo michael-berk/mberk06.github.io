@@ -6,6 +6,25 @@
   box-sizing: border-box
   outline: none
 
+//contact
+#contact-button-wrapper
+  display: flex
+  margin-top: 20vh
+  justify-content: center
+#contact-button
+  font-size: 50px
+  height: 60px
+  font-size: 30px
+  text-transform: none
+  border-width: 2px
+  padding: 0
+  text-align: center
+  width: 200px
+  color: $sand
+#contact-button:hover
+  color: $darkblue
+  border-width: 2px
+
 .exp-hr
   border: solid $white
   border-width: 1px 0 0
@@ -128,6 +147,7 @@
   .skill
     font-style: italic
 
+//mobile
 @media screen and (max-width: 768px)
   .container:before
     left: 8px
@@ -141,8 +161,8 @@
   .timeline-block-left
     float: left
     direction: ltr
-    text-align: left
+    text-align: left 
     h3
       text-align: left
-
-
+  #contact-button-wrapper
+    margin-bottom: 40px
