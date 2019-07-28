@@ -1,9 +1,11 @@
-script(src="/scripts/contactForm.js")
+script(src="/scripts/contactForm.js") //handle contact posts
+script(src="/scripts/tooltip.js") //handle tooltip for mobile
+
 
 div(id="contact-content")
 	//contact form
 	form(id="contactForm", onsubmit="return false")
-		.tooltip_small(id="mail")
+		.tooltip_small(id="mail", onclick="tooltip(this)")
 			span.tooltiptext "Thanks for exploring my site. Hopefully you learned a little about me. Got any questions or ideas?"
 		textarea(name="message", id="message", placeholder="...", autocomplete="off")
 		br

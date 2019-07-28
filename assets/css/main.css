@@ -488,8 +488,6 @@ hr {
     visibility: visible; }
   .tooltip_small:active .tooltiptext {
     visibility: visible; }
-  .tooltip_small:click .tooltiptext {
-    visibility: visible; }
 
 .tooltip_question {
   position: relative;
@@ -520,8 +518,6 @@ hr {
   .tooltip_question:hover .tooltiptext {
     visibility: visible; }
   .tooltip_question:active .tooltiptext {
-    visibility: visible; }
-  .tooltip_question:click .tooltiptext {
     visibility: visible; }
 
 .tooltip_basketball {
@@ -555,8 +551,6 @@ hr {
     visibility: visible; }
   .tooltip_basketball:active .tooltiptext {
     visibility: visible; }
-  .tooltip_basketball:click .tooltiptext {
-    visibility: visible; }
 
 .tooltip_right {
   position: relative;
@@ -586,8 +580,6 @@ hr {
   .tooltip_right:hover .tooltiptext {
     visibility: visible; }
   .tooltip_right:active .tooltiptext {
-    visibility: visible; }
-  .tooltip_right:click .tooltiptext {
     visibility: visible; }
 
 .tooltip_left {
@@ -642,8 +634,6 @@ hr {
     visibility: visible; }
   .tooltip_left:active .tooltiptext {
     visibility: visible; }
-  .tooltip_left:click .tooltiptext {
-    visibility: visible; }
 
 .tooltip_shark {
   position: relative;
@@ -696,8 +686,6 @@ hr {
   .tooltip_shark:hover .tooltiptext {
     visibility: visible; }
   .tooltip_shark:active .tooltiptext {
-    visibility: visible; }
-  .tooltip_shark:click .tooltiptext {
     visibility: visible; }
 
 #navbar {
@@ -1000,7 +988,7 @@ footer {
     padding: 10px 10px 10px 10px; }
   .values:hover .tooltiptext {
     visibility: visible; }
-  .values:click .tooltiptext {
+  .values:active .tooltiptext {
     visibility: visible; }
 
 .wordcloud-container-svg {

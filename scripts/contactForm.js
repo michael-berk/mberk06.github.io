@@ -34,6 +34,8 @@ $(document).ready(function() {
                     $("#contactMethod").hide();
                     $("#sendButton").hide();
                     $("#sendButton").prop("disabled",true)
+                    $("#mail").hide();
+
                     $("#sentText").css("visibility", "visible");
                 },
                 error: function(xhr, status, error) {

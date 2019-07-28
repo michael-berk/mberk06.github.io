@@ -1,10 +1,12 @@
+script(src="/scripts/tooltip.js") //handle tooltip for mobile
+
 footer(id="footer")
 	#social-container1
 		hr
 		a(href="/")
 			p(id="footer-name") Michael Berk 
 
-		.tooltip_right(id="sushi")
+		.tooltip_right(id="sushi", onclick="tooltip(this)")
 			span.tooltiptext "My second passion is food. My favorite cuisine is sushi (because of childhood priming), but I will eat literally anything."
 
 		#social-container2
