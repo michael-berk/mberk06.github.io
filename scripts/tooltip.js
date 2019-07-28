@@ -4,7 +4,8 @@ $(document).click(function(e) {
 	if (!classes.includes(e.target.className)) {
 		for (var i = 0; i < classes.length; i++) {
 			var c = classes[i];
-			$('.'+c).children('.tooltiptext').removeAttr('style');
+			//$('.'+c).children('.tooltiptext').removeAttr('style');
+			$('.'+c).children('.tooltiptext').css('visibility','hidden');
 		}
 	}
 });
