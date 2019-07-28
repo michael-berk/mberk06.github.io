@@ -311,7 +311,8 @@ body {
   color: #1D2041;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  width: 100vw; }
+  width: 100vw;
+  cursor: pointer; }
 
 .button,
 button,
@@ -865,7 +866,8 @@ footer {
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-bottom: -85px; }
+  margin-bottom: -85px;
+    margin-bottom-cursor: pointer; }
 
 #hi {
   width: 75px;
@@ -1200,7 +1202,8 @@ footer {
   padding: 0;
   text-align: center;
   width: 200px;
-  color: #DCDCDD; }
+  color: white;
+  font-weight: bold; }
 
 #contact-button:hover {
   color: #1D2041;
