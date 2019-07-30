@@ -53,15 +53,19 @@
   background-size: contain
   z-index: 1000000
 
+#sentContainer
+	width: 100%
+	height: 100%
+	display: grid
+	place-items: center center
 #sentText
-	position: absolute    
 	width: 100px
 	height: 50px
-	top: 50%
-	left: 50%
-	margin-left: -50px
-	margin-top: -25px
 	visibility: hidden
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-30%, -50%)
 
 ::placeholder
   color: $darkblue
@@ -92,6 +96,10 @@
 		margin-right: auto
 		display: block
 		float: none
+	#mail
+		width: 50px
+		height: 50px
+		margin-top: 30px
 
 
 

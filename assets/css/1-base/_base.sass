@@ -301,27 +301,27 @@ hr
       border-style: solid
       border-color: transparent transparent transparent $darkblue
     @media screen and (max-width: 768px)
-      visibility: hidden
       font-size: 14px
-      width: 250px
+      width: 200px
+      border-radius: 4px
+      padding: 5px 5px
+      visibility: hidden
       background-color: $darkblue
       color: $white
       text-align: center
-      border-radius: 4px
-      padding: 5px 5px
       position: absolute
-      z-index: 100000000
-      left: 110%
+      z-index: 1
+      top: 120%
+      right: -88px
+      opacity: 1
       &::after
         content: ""
         position: absolute
-        top: 50%
-        right: 100%
-        margin-top: -5px
-        margin-left: -2000px
+        left: 50%
+        margin-left: -5px
         border-width: 5px
         border-style: solid
-        border-color: transparent $darkblue transparent transparent
+        border-color: transparent transparent $darkblue transparent
    
   &:hover .tooltiptext
     visibility: visible
@@ -354,27 +354,28 @@ hr
       border-style: solid
       border-color: transparent transparent transparent $darkblue
     @media screen and (max-width: 768px)
-      visibility: hidden
       font-size: 14px
-      width: 250px
+      width: 200px
+      border-radius: 4px
+      padding: 5px 5px
+      visibility: hidden
       background-color: $darkblue
       color: $white
       text-align: center
-      border-radius: 4px
-      padding: 5px 5px
       position: absolute
-      z-index: 100000000
-      left: 110%
+      z-index: 1
+      top: 100%
+      right: -88px
+      opacity: 1
       &::after
         content: ""
         position: absolute
-        top: 50%
-        right: 100%
-        margin-top: -5px
-        margin-left: -2000px
+        bottom: 100%
+        left: 50%
+        margin-left: -5px
         border-width: 5px
         border-style: solid
-        border-color: transparent $darkblue transparent transparent
+        border-color: transparent transparent $darkblue transparent
   &:hover .tooltiptext
     visibility: visible
   &:active .tooltiptext
