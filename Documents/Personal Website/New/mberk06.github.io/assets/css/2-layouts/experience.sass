@@ -1,0 +1,173 @@
+ 
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  outline: none
+
+//contact
+#contact-button-wrapper
+  display: flex
+  margin-top: 20vh
+  justify-content: center
+#contact-button
+  font-size: 50px
+  height: 60px
+  font-size: 30px
+  text-transform: none
+  border-width: 2px
+  padding: 0
+  text-align: center
+  width: 200px
+  color: white
+  font-weight: bold
+#contact-button:hover
+  color: $darkblue
+  border-width: 2px
+
+.exp-hr
+  border: solid $white
+  border-width: 1px 0 0
+
+#experience-background
+    background-image: linear-gradient($lightblue, $darkblue)
+    margin: 0
+    margin-bottom: -85px
+
+#scuba
+  width: 50px
+  height: 50px
+  margin-right: 40px
+  transform: translate(50px, 0)
+  display: block
+  opacity: 1
+  background-image: url(/assets/img/scuba_dark.png)
+  background-size: contain
+  z-index: 1000000
+
+#shark
+  width: 75px
+  height: 75px
+  margin-right: 40px
+  transform: translate(50px, 0)
+  display: block
+  opacity: 1
+  background-image: url(/assets/img/shark.png)
+  background-size: contain
+  z-index: 1000000
+
+.experience-bullets
+  margin-top: 5px
+  margin-bottom: 10px
+  p
+    margin-bottom: 0px
+    margin-left: 5%
+    font-size: 14px
+
+.container
+  width: 80%
+  padding: 50px 0
+  margin: 0 auto
+  margin-bottom: -70px
+  position: relative
+  overflow: hidden
+  text-align: justify
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -1px
+    width: 2px
+    height: 100%
+    background: $sand
+    z-index: 1
+
+.timeline-block
+  width: -webkit-calc(50% + 8px)
+  width: -moz-calc(50% + 8px)
+  width: calc(50% + 8px)
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-box
+  display: flex
+  -webkit-box-pack: justify
+  -webkit-justify-content: space-between
+  -moz-box-pack: justify
+  justify-content: space-between
+  clear: both
+
+.timeline-block-right
+  float: right
+  h3
+    text-align: left
+
+
+.timeline-block-left
+  float: left
+  direction: rtl
+  h3
+    text-align: right
+
+
+.marker
+  width: 16px
+  height: 16px
+  border-radius: 50%
+  border: 2px solid $white
+  background: $white
+  margin-top: 10px
+  z-index: 10
+
+.marker:hover
+  background: transparent
+  border: 2px solid $white
+
+.timeline-content
+  width: 95%
+  padding: 0 15px
+  color: $white
+  transform: translate(0, 8px)
+  h3
+    margin-top: 5px
+    margin-bottom: 5px
+    font-size: 30px
+    font-weight: 1
+    color: $white
+  span
+    font-size: 20px
+    color: $white
+    font-style: italic
+
+  p
+    line-height: 1.5em
+    word-spacing: 1px
+    color: $white
+
+  .skill
+    font-style: italic
+
+//mobile
+@media screen and (max-width: 768px)
+  .container
+    margin-left: 40px
+  .container:before
+    left: 8px
+    width: 2px
+  .timeline-block
+    width: 100%
+    margin-bottom: 30px
+  .timeline-block-right
+    float: none
+    text-align: left
+  .timeline-block-left
+    float: left
+    direction: ltr
+    text-align: left 
+    h3
+      text-align: left
+  #contact-button-wrapper
+    margin-bottom: 40px
+  *
+    cursor: pointer
