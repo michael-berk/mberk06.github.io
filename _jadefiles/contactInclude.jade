@@ -1,5 +1,9 @@
 script(src="/scripts/contactForm.js") //handle contact posts
 script(src="/scripts/tooltip.js") //handle tooltip for mobile
+script(src="https://www.google.com/recaptcha/api.js?render=6LeVQMkUAAAAAAaa_raRB3Xi8Beei7YEotdOo7FP") //recaptcha google
+scripts(src="/scripts/tecaptcha.js")
+
+div(class='g-recaptcha', data-sitekey='6LeVQMkUAAAAAAaa_raRB3Xi8Beei7YEotdOo7FP', id="recaptcha", name="recaptcha")
 
 
 div(id="contact-content")
@@ -11,9 +15,6 @@ div(id="contact-content")
 		br
 		input(name="contactMethod", id="contactMethod", placeholder="email", autocomplete="off")
 		button(id="sendButton", type="Submit") Send
-
-
-
 
 //sent button
 #sent-container
