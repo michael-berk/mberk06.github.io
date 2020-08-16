@@ -522,7 +522,8 @@ hr {
 
 .tooltip_basketball {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  background-color: #5D95D0; }
   .tooltip_basketball .tooltiptext {
     font-weight: normal;
     font-size: 14px;
