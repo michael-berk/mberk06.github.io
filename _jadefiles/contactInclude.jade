@@ -1,7 +1,8 @@
 script(src="/scripts/contactForm.js") //handle contact posts
 script(src="/scripts/tooltip.js") //handle tooltip for mobile
-script(src="recaptcha/api.js?render=6LcfU78ZAAAAAD4d8xlCeDH_6WaAFDkGYjZGOK9u") //recaptcha google
-scripts(src="/scripts/tecaptcha.js")
+script(src="https://www.google.com/recaptcha/api.js") 
+// script(src="recaptcha/api.js?render=6LcfU78ZAAAAAD4d8xlCeDH_6WaAFDkGYjZGOK9u") //recaptcha google
+scripts(src="/scripts/recaptcha.js")
 
 div(id="contact-content")
 	//contact form
@@ -11,8 +12,7 @@ div(id="contact-content")
 		textarea(name="message", id="message", placeholder="...", autocomplete="off")
 		br
 		input(name="contactMethod", id="contactMethod", placeholder="email", autocomplete="off")
-		div(class='grecaptcha-badge', data-sitekey='6LcfU78ZAAAAAD4d8xlCeDH_6WaAFDkGYjZGOK9u', name="recaptcha")
-		button(id="sendButton", type="Submit") Send
+		button(class="g-recaptcha", data-sitekey="6LcfU78ZAAAAAD4d8xlCeDH_6WaAFDkGYjZGOK9u", data-callback='onSubmit', data-action='submit', id="sendButton", type="Submit") Send
 
 //sent button
 #sent-container
