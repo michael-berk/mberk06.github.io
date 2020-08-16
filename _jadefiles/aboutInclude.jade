@@ -1,71 +1,78 @@
 script(src="/scripts/becauseButtons.js") //handle button clicks
 script(src="/scripts/wordcloud.js") //handle wordcloud mouseover
 script(src="/scripts/tooltip.js") //handle tooltip for mobile
+script(src="/scripts/aboutScrollPrompt.js") //handle scroll prompt removal 
 
 meta(name="viewport", content="width=device-width, initial-scale=1")
 
 .opener-container
 h1(id="opener") I Love<br>Building
+.scroll-prompt(scroll-prompt='', ng-show='showPrompt', style='opacity: 1;')
+    .scroll-prompt-arrow-container
+        .scroll-prompt-arrow
+            div
+        .scroll-prompt-arrow
+            div
 
 #about-content
-	#because-container
-		h2(id="becuase", class="main-sentence") ...because I can: 
-		#because-button-container
-			button(id="b_clutter", class="because-buttons") reduce<br>clutter. 
-			button(id="b_improvement", class="because-buttons") improve<br>myself.
-			button(id="b_money", class="because-buttons") make money<br>while I sleep.
-		#because-text-container
-			p(id="because-text1", class="because-text")
-			p(id="because-text2", class="because-text")
+    #because-container
+        h2(id="becuase", class="main-sentence") ...because I can: 
+        #because-button-container
+            button(id="b_clutter", class="because-buttons") reduce<br>clutter. 
+            button(id="b_improvement", class="because-buttons") improve<br>myself.
+            button(id="b_money", class="because-buttons") make money<br>while I sleep.
+        #because-text-container
+            p(id="because-text1", class="because-text")
+            p(id="because-text2", class="because-text")
 
-	h2(class="main-sentence", id="values-sentence") 
-		| But, what motivates me to build
-		span(class="tooltip_question", id="question", onclick="tooltip(this)") ?
-			<span class="tooltiptext"> "Here is a<a href="/assets/img/whytree.png")> tree </a> showing how values motivate me. Values in yellow are the ones I'm currently focusing on." </span>
+    h2(class="main-sentence", id="values-sentence") 
+        | But, what motivates me to build
+        span(class="tooltip_question", id="question", onclick="tooltip(this)") ?
+            <span class="tooltiptext"> "Here is a<a href="/assets/img/whytree.png")> tree </a> showing how values motivate me. Values in yellow are the ones I'm currently focusing on." </span>
 
-	#values-container
-		.value-container
-			h2(class="numeral") I
-			h3(class="values", onclick="tooltip(this)") Growth
-				<span class="tooltiptext"> Consistently improving myself and my skills</span>
-		.value-container
-			h2(class="numeral") II
-			h3(class="values", onclick="tooltip(this)") Ambition
-				span.tooltiptext Setting goals that are sometimes too difficult to achieve 
-		.value-container
-			h2(class="numeral") III
-			h3(class="values", onclick="tooltip(this)") Pleasure
-				span.tooltiptext Staying present and enjoying the process
-		.value-container
-			h2(class="numeral") IV
-			h3(class="values", onclick="tooltip(this)") Grit
-				span.tooltiptext Persevering in sub-optimal circumstances
-		.value-container
-			h2(class="numeral") V
-			h3(class="values", onclick="tooltip(this)") Impact
-				span.tooltiptext Utilizing the 80/20 rule when planning my work
-		.value-container
-			h2(class="numeral") VI
-			h3(class="values", onclick="tooltip(this)") Exploration
-				span.tooltiptext Allowing curiosity to steer my projects
-
-
-	h2(class="main-sentence", id="wordcloud-sentence") Using these values, I try to incorporate...
-	.wordcloud-container-svg
-		script.
-			$('.wordcloud-container-svg').load('/wordcloud/wordcloud.svg');
-
-	.wordcloud-container-img
-		img(id="wordcloud-img", src="/assets/img/wordcloud-mobile.png",style="width:100%")
-
-	span(class="tooltip_basketball", id="basketball", onclick="tooltip(this)")
-		<span class="tooltiptext"> "If you're curious, this is the <a href="https://www.youtube.com/watch?v=SrlBgLdGKZM")>best dunk</a> of all time. </span>
+    #values-container
+        .value-container
+            h2(class="numeral") I
+            h3(class="values", onclick="tooltip(this)") Growth
+                <span class="tooltiptext"> Consistently improving myself and my skills</span>
+        .value-container
+            h2(class="numeral") II
+            h3(class="values", onclick="tooltip(this)") Ambition
+                span.tooltiptext Setting goals that are sometimes too difficult to achieve 
+        .value-container
+            h2(class="numeral") III
+            h3(class="values", onclick="tooltip(this)") Pleasure
+                span.tooltiptext Staying present and enjoying the process
+        .value-container
+            h2(class="numeral") IV
+            h3(class="values", onclick="tooltip(this)") Grit
+                span.tooltiptext Persevering in sub-optimal circumstances
+        .value-container
+            h2(class="numeral") V
+            h3(class="values", onclick="tooltip(this)") Impact
+                span.tooltiptext Utilizing the 80/20 rule when planning my work
+        .value-container
+            h2(class="numeral") VI
+            h3(class="values", onclick="tooltip(this)") Exploration
+                span.tooltiptext Allowing curiosity to steer my projects
 
 
-	h2(class="main-sentence") Here's what I've done so far...
-	.button-wrapper
-		form(action="/experience#last")
-			input(id="experience-button", type="submit", value="experience")
+    h2(class="main-sentence", id="wordcloud-sentence") Using these values, I try to incorporate...
+    .wordcloud-container-svg
+        script.
+            $('.wordcloud-container-svg').load('/wordcloud/wordcloud.svg');
+
+    .wordcloud-container-img
+        img(id="wordcloud-img", src="/assets/img/wordcloud-mobile.png",style="width:100%")
+
+    span(class="tooltip_basketball", id="basketball", onclick="tooltip(this)")
+        <span class="tooltiptext"> "If you're curious, this is the <a href="https://www.youtube.com/watch?v=SrlBgLdGKZM")>best dunk</a> of all time. </span>
+
+
+    h2(class="main-sentence") Here's what I've done so far...
+    .button-wrapper
+        form(action="/experience#last")
+            input(id="experience-button", type="submit", value="experience")
 
 
 
