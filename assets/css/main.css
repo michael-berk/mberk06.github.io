@@ -429,7 +429,13 @@ hr {
 
 .tooltip {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: content-box;
+  border-width: 100px;
+  border-color: transparent;
+  border-style: solid;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip .tooltiptext {
     font-size: 14px;
     width: 250px;
@@ -460,7 +466,11 @@ hr {
 
 .tooltip_small {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: content-box;
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip_small .tooltiptext {
     font-size: 14px;
     width: 250px;
@@ -491,7 +501,11 @@ hr {
 
 .tooltip_question {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: content-box;
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip_question .tooltiptext {
     font-weight: normal;
     visibility: hidden;
@@ -523,7 +537,10 @@ hr {
 .tooltip_basketball {
   position: relative;
   display: inline-block;
-  background-color: #5D95D0; }
+  box-sizing: content-box;
+  border: 20px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip_basketball .tooltiptext {
     font-weight: normal;
     font-size: 14px;
@@ -555,7 +572,11 @@ hr {
 
 .tooltip_right {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: content-box;
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip_right .tooltiptext {
     visibility: hidden;
     font-size: 14px;
@@ -585,7 +606,11 @@ hr {
 
 .tooltip_left {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: content-box;
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip_left .tooltiptext {
     visibility: hidden;
     font-size: 14px;
@@ -638,7 +663,11 @@ hr {
 
 .tooltip_shark {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: content-box;
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .tooltip_shark .tooltiptext {
     visibility: hidden;
     font-size: 14px;
@@ -880,7 +909,7 @@ footer {
   background-image: url(/assets/img/hi.png);
   background-size: contain; }
 
-#about-button-wrapper {
+.button-wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -891,15 +920,12 @@ footer {
   height: 60px;
   font-size: 30px;
   text-transform: none;
-  border-width: 2px;
   padding: 0;
   text-align: center;
-  width: 200px;
+  width: 300px;
   color: #DCDCDD;
-  font-weight: bold;
-  position: block;
-  -webkit-transform: translate(0, 25vh);
-          transform: translate(0, 25vh); }
+  margin-bottom: 20vh;
+  margin-top: 20px; }
 
 #about-button:hover {
   color: #1D2041;
