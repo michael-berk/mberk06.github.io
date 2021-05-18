@@ -61,6 +61,17 @@ h1(id="opener") I Love<br>Building
     .wordcloud-container-svg
         script.
             $('.wordcloud-container-svg').load('/wordcloud/wordcloud.svg');
+    .wordcloud-container-img
+        img(id="wordcloud-img", src="/assets/img/wordcloud-mobile.png",style="width:100%")
+
+    span(class="tooltip_basketball", id="basketball", onclick="tooltip(this)")
+        <span class="tooltiptext"> "If you're curious, this is the <a href="https://www.youtube.com/watch?v=SrlBgLdGKZM")>best dunk</a> of all time. </span>
+
+
+    h2(class="main-sentence") Here's what I've done so far...
+    .button-wrapper
+        form(action="/experience#last")
+            input(id="experience-button", type="submit", value="experience")
 
     .wordcloud-container-img
         img(id="wordcloud-img", src="/assets/img/wordcloud-mobile.png",style="width:100%")

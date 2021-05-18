@@ -1,7 +1,11 @@
 _site
 .idea
 node_modules
+<<<<<<< HEAD
 *.swp
+=======
+recaptcha.txt
+>>>>>>> 6a4a5f9ecb965ea9a9b828536a3cf971382a930e
 
 
 # Created by https://www.gitignore.io/api/osx,sass,jekyll
