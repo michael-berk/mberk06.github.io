@@ -9,15 +9,15 @@
   "author": "Shane Osbourne",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^1.3.7",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "1.0.0",
     "gulp-jade": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-sass": "^4.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
+    "url": "git+https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
   },
   "keywords": [
     "jekyll",
@@ -31,9 +31,10 @@
   "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
   "dependencies": {
     "ajax": "0.0.4",
-    "clean-css": "^4.2.1",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
+    "clean-css": "^4.2.3",
+    "jade": "^1.11.0",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
     "lodash.template": "^4.5.0"
   }
 }

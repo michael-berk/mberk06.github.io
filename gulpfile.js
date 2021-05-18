@@ -12,44 +12,34 @@ var messages = {
 
 //I ADDED BELOW FUNC TO WORK WITH JADE
 //Purpose: convert jade to html and save file in _includes
-gulp.task('jade', function() {
+gulp.task('jade', gulp.series(function() {
 	return gulp.src('_jadefiles/*.jade')
 	.pipe(jade())
 	.pipe(gulp.dest('_includes'));
-});
+}));
 
-
+/**
 /**
  * Build the Jekyll Site and tell browser sync to start
  */
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', gulp.series(function (done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
-});
+}));
 
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', gulp.series(['jekyll-build'], function () {
     browserSync.reload();
-});
+}));
 
-/**
- * Wait for jekyll-build, then launch the Server
- */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        }
-    });
-});
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', function () {
+gulp.task('sass', gulp.series(function () {
     return gulp.src('assets/css/main.scss')
         .pipe(sass({
             includePaths: ['css'],
@@ -59,21 +49,33 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('_site/assets/css')) //may need to be changed
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
-});
+}));
 
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
-gulp.task('watch', function () {
+gulp.task('watch', gulp.series(function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*', '_includes/*','pages/*','scripts/*','wordcloud/*'], ['jekyll-rebuild']); //Check what saves cause browser sync to run
 	gulp.watch('_jadefiles/*.jade', ['jade']); //I ADDED: automatically convert jade files to html
 
-});
+}));
+
+/**
+ * Wait for jekyll-build, then launch the Server
+ */
+gulp.task('browser-sync', gulp.series(['sass', 'jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        }
+    });
+}));
+ 
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', gulp.series(['jade','browser-sync', 'watch']));

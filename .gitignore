@@ -1,6 +1,7 @@
 _site
 .idea
 node_modules
+*.swp
 
 
 # Created by https://www.gitignore.io/api/osx,sass,jekyll
